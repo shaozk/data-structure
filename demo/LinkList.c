@@ -1,23 +1,44 @@
-/*单链表*/
-#include<stddef.h>     // 包含NULL的定义
+//
+// Created by shaozk on 2021/3/6.
+//
+
 #include<stdio.h>
-#include<stdlib.h>  
+#include<stdlib.h>
 
-#define ElemType int
-#define ERROR -2
+#include "LinkList.h"
+#include "../utils/print.h"
 
-// 单链表的存储结构
-typedef struct LNode {
-    ElemType data;      // 结点的数据域 
-    struct LNode *next;        // 结点的指针域
-}LNode, *LinkList;      // LinkList为指向结构体LNode的指针类型
+// 获取链表长度
+int GetLinkLength(LinkList L) {
+    int len = 0;
+    while(L->next) {
+        L = L->next;
+        len++;
+    }
+    return len;
+}
 
-// 初始化
-LinkList InitList() {
-    // 构造一个空的单链表
+// 输出链表长度
+void PrintLinkLength(LinkList L) {
+    printf("length:\t%d\n", GetLinkLength(L));
+}
+
+// 链表显示
+void PrintLinkList(LinkList L) {
+    PrintLinkLength(L);
+    printf("list:\t");
+    while(L->next) {
+        printf("%d ", L->next->data);
+        L = L->next;
+    }
+    printf("\n");
+}
+
+// 初始化(包含头指针的单链表)
+LinkList InitLinkList() {
     LinkList head = (LNode*)malloc(sizeof(LNode));    // 创建头指针
     head->next = NULL;
-    LNode *temp = head;
+    LinkList temp = head;
     for(int i = 1; i < 6; i++) {
         LNode *node=(LNode*)malloc(sizeof(LNode));
         node->data=i;
@@ -28,49 +49,85 @@ LinkList InitList() {
     return head;
 }
 
-// 取值
-ElemType GetElem(LinkList list, int ind) {
-    LNode *p = list->next;
-    int i = 1;
-    while(p && i < ind) {
-        p = p->next;
-        i++;
-    }
-    if(!p || i > ind) return ERROR;
-    return p->data;
-}
-
-// 查找
-LNode* LocateElem(LinkList list, ElemType e) {
-    LNode *p = list->next;
-    while(p && p->data != e) {
-        p = p->next;
-    }
-    return p;
-}
-
 // 插入
+LinkList InsertLinkList(LinkList L, int i, ElemType e) {
+    LNode *temp = L;    // 创建临时结点
+    // 找到插入位置的上一个结点
+    for(int j = 1; j < i; j++) {
+        temp = temp->next;
+        if(temp == NULL) {
+            Print("error");
+            return L;
+        }
+    }
+    // 创建插入结点
+    LNode *node = (LNode*)malloc(sizeof(LNode));
+    node->data = e;
+    // 插入结点
+    node->next = temp->next;
+    temp->next = node;
+    return L;
+}
 
 
 // 删除
-
-// 创建单链表
-
-// 链表显示
-void display(LinkList list) {
-    while(list) {
-        printf("-> %d ", list->next->data);
-        list = list->next;
+LinkList DeleteLinkList(LinkList L, int i) {
+    // 创建临时结点
+    LNode *temp = L;
+    // 找到删除元素的上一个结点
+    for(int j = 1; j < i; j++) {
+        temp = temp->next;
+        if(temp == NULL) {
+            Print("error");
+            return L;
+        }
     }
-    printf("\n");
+    // 保存要删除的结点
+    LNode *del = temp->next;
+    // 删除结点
+    temp->next = temp->next->next;
+    // 释放所删除结点，避免内存泄漏
+    free(del);
+    return L;
+
+}
+
+// 查找结点的值
+ElemType LocateLinkList(LinkList L, int i) {
+    // 创建临时结点
+    LNode *temp = L;
+    while(i) {
+        temp = temp->next;
+        i--;
+    }
+    return temp->data;
 }
 
 
-void main(){
-    LinkList list = InitList();
-    ElemType a = GetElem(list, 2);
-    printf("%d\n", a);
-    LinkList l = LocateElem(list, 3);
-    display(l);
-    display(list);
+
+
+int main(){
+    // 初始化链表
+    Print("\n--init link list--\n");
+    LinkList L = InitLinkList();
+    PrintLinkList(L);
+
+    // 插入元素
+    Print("\n--insert link list--\n");
+    InsertLinkList(L, 2, 99);
+    PrintLinkList(L);
+
+    // 删除元素
+    Print("\n--delete link list--\n");
+    DeleteLinkList(L, 2);
+    PrintLinkList(L);
+
+    // 查找结点的值
+    Print("\n--locate link list--\n");
+    ElemType e = LocateLinkList(L, 5);
+    printf("elem:\t%d\n", e);
+
+
+
+    return 0;
 }

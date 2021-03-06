@@ -19,7 +19,7 @@ typedef struct {
 
 
 // 初始化顺序表
-SqList* InitList() {
+SqList* InitSqList() {
     SqList *L = (SqList*)malloc(sizeof(SqList));
     if(L == NULL) {
         printf("init malloc error!!!");
@@ -30,7 +30,7 @@ SqList* InitList() {
 }
 
 // 附加元素操作
-Status AppendList(SqList *L, ElemType e) {
+Status AppendSqList(SqList *L, ElemType e) {
     // 判断顺序表是否大于MAXSIZE,是则抛出动态增加容量
     if(L->length >= MAXSIZE) {
         return FALSE;
@@ -42,7 +42,7 @@ Status AppendList(SqList *L, ElemType e) {
 }
 
 // 插入
-Status InsertList(SqList *L, int i, ElemType e) {
+Status InsertSqList(SqList *L, int i, ElemType e) {
     if(i > MAXSIZE) return FALSE;
     for(int j = L->length; j >= i; j--) {
         L->data[j] = L->data[j-1];
@@ -53,7 +53,7 @@ Status InsertList(SqList *L, int i, ElemType e) {
 }
 
 // 查找
-int LocateElem(SqList *L, ElemType e) {
+int LocateSqList(SqList *L, ElemType e) {
     for(int i = 0; i < L->length; i++) {
         if(e == L->data[i]) {
             return i+1;
@@ -63,7 +63,7 @@ int LocateElem(SqList *L, ElemType e) {
 }
 
 // 删除
-void DeleteList(SqList *L, int i) {
+void DeleteSqList(SqList *L, int i) {
     if(i < 0 || i > L->length) printf("error");
     for(int j = i - 1; j < L->length - 1; j++) {
         L->data[j] = L->data[j + 1];
@@ -73,13 +73,13 @@ void DeleteList(SqList *L, int i) {
 }
 
 // 修改
-void UpdateList(SqList *L, int i, ElemType e) {
+void UpdateSqList(SqList *L, int i, ElemType e) {
     if(i < 0 || i > L->length) printf("error\n");
     L->data[i-1] = e;
 }
 
 // 输出顺序表
-void PrintList(SqList *L) {
+void PrintSqList(SqList *L) {
     printf("list:\t"); 
     for(int i = 0; i < L->length; i++) {
         printf("%d ", L->data[i]);
@@ -88,7 +88,7 @@ void PrintList(SqList *L) {
 }
 
 // 顺序表长度
-void PrintLength(SqList *L) {
+void PrintSqLength(SqList *L) {
         printf("length:\t%d\n", L->length);
 }
 
@@ -102,22 +102,22 @@ void PrintArr(ElemType *arr, int n) {
 }
 
 // 判断顺序表是否为空
-Status IsEmpty(SqList *L) {
+Status IsSqEmpty(SqList *L) {
     return L->length == 0 ? TRUE : FALSE;
 }
 
 // 获取元素个数
-int GetLength(SqList *L) {
+int GetSqLength(SqList *L) {
     return L->length;
 }
 
 // 清空顺序表
-void ClearList(SqList *L) {
+void ClearSqList(SqList *L) {
     L->length = 0;
 }
 
 // 销毁顺序表
-void DestroyList(SqList *L) {
+void DestroySqList(SqList *L) {
     free(L);
     L = NULL;
 }
