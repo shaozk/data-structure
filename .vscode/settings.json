@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "stddef.h": "c",
-        "stdio.h": "c",
-        "stdlib.h": "c",
-        "sqlist.h": "c"
-    }
-}
