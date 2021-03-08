@@ -11,5 +11,6 @@ add_executable(MergeList demo/MergeList.c demo/utils/print.h demo/include/LinkLi
 add_executable(ReverseList demo/ReverseList.c demo/utils/print.h)
 add_executable(SqStack demo/SqStack.c demo/include/SqStack.h)
 add_executable(LinkStack demo/include/LinkStack.h demo/LinkStack.c)
+add_executable(Test exp/stack.c)
 
 
