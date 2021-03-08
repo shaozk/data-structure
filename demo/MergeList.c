@@ -4,7 +4,6 @@
 
 #include "include/SqList.h"
 #include "include/LinkList.h"
-#include "utils/print.h"
 
 /**
  * 顺序表的合并
@@ -62,7 +61,10 @@ int main(){
     printf("c"); PrintSqList(Lc);
 
     // 单链表初始化
-
+    LinkList Ld = InitLinkList(dArr, 6), Le = InitLinkList(eArr, 6), Lf;
+    Print("\n--init link list--\n");
+    Print("d"); PrintLinkList(Ld);
+    Print("e"); PrintLinkList(Le);
 
     // 单链表合并
 
