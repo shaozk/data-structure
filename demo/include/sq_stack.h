@@ -1,10 +1,14 @@
-//
-// Created by shaozk on 2021/3/8.
-//
+/*****************************************************************************
+ *
+ * Name: sq_stack.h
+ * Date: 2021/3/8
+ * Author: shaozk <https://github.com/shaozk>
+ *
+ *****************************************************************************/
 
 
-#ifndef DATA_STRUCTURE_SQSTACK_H
-#define DATA_STRUCTURE_SQSTACK_H
+#ifndef DATA_STRUCTURE_SQ_STACK_H
+#define DATA_STRUCTURE_SQ_STACK_H
 
 /*
  * 顺序栈
@@ -13,20 +17,19 @@
 #include<stdlib.h>
 
 #define MAXSIZE 10
-#define SElemType int
 #define Status int
 #define FALSE 0
 #define TRUE 1
 
 typedef struct {
-    SElemType data[MAXSIZE];
+    int data[MAXSIZE];
     int top;
-}SqStack;
+}sq_stack;
 
 // 初始化顺序栈
-SqStack* InitSqLStack() {
-    SqStack *S;
-    S = (SqStack*)malloc(sizeof(SqStack));
+sq_stack* init_stack_sq() {
+    sq_stack *S;
+    S = (sq_stack*)malloc(sizeof(sq_stack));
     if(!S) {
         printf("stack overflow\n");
         return NULL;
@@ -36,7 +39,7 @@ SqStack* InitSqLStack() {
 }
 
 // 判断栈满
-Status IsSqFull(SqStack *S) {
+Status is_full_sq(sq_stack *S) {
     if(S->top == MAXSIZE - 1) {
         printf("stack overflow!!");
         return TRUE;
@@ -45,7 +48,7 @@ Status IsSqFull(SqStack *S) {
 }
 
 // 判断栈空
-Status IsSqEmpty(SqStack *S) {
+Status is_empty_sq(sq_stack *S) {
     if(S->top == -1) {
         printf("stack is empty");
         return TRUE;
@@ -54,23 +57,23 @@ Status IsSqEmpty(SqStack *S) {
 }
 
 // 入栈
-Status SqPush(SqStack *S, SElemType e) {
-    if(IsSqFull(S))
+Status push_sq(sq_stack *S, int e) {
+    if(is_full_sq(S))
         return FALSE;
     S->data[++S->top] = e;
     return TRUE;
 }
 
 // 出栈
-SElemType SqPop(SqStack *S) {
-    if(IsSqEmpty(S)) {
+int pop_sq(sq_stack *S) {
+    if(is_empty_sq(S)) {
         return FALSE;
     }
     return S->data[S->top--];
 }
 
 // 输出栈
-void PrintSqStack(SqStack *S) {
+void print_stack_sq(sq_stack *S) {
     for(int i = 0; i <= S->top; i++) {
         printf("%d ", S->data[i]);
     }
@@ -78,6 +81,6 @@ void PrintSqStack(SqStack *S) {
 }
 
 
-#endif //DATA_STRUCTURE_SQSTACK_H
+#endif //DATA_STRUCTURE_SQ_STACK_H
 
 

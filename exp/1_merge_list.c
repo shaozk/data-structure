@@ -5,17 +5,17 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-typedef struct LNode {
+typedef struct link_node {
     int data;
-    struct LNode *next;
-}LNode, *LinkList;
+    struct link_node *next;
+}link_node, *link_list;
 
-LinkList InitList(LinkList list, int arr[], int n) {
-    LinkList head = (LNode*)malloc(sizeof(LNode));
+link_list InitList(link_list list, int arr[], int n) {
+    link_list head = (link_node*)malloc(sizeof(link_node));
     head->next = NULL;
-    LNode *p = head;
+    link_node *p = head;
     for(int i = 0; i < n; i++) {
-        LNode *node=(LNode*)malloc(sizeof(LNode));
+        link_node *node=(link_node*)malloc(sizeof(link_node));
         node->data=arr[i];
         node->next=NULL;
         p->next=node;
@@ -24,7 +24,7 @@ LinkList InitList(LinkList list, int arr[], int n) {
     return head;
 }
 
-void showList(LinkList list) {
+void showList(link_list list) {
     while(list->next) {
         printf("%d ", list->next->data);
         list = list->next;
@@ -40,7 +40,7 @@ void showArr(int *arr, int n) {
 }
 
 void main(){
-    LinkList l1, l2;
+    link_list l1, l2;
     int a1[] = {1,3,5,7,9}, a2[] = {2,4,5,6,8};
     l1 = InitList(l1, a1, 5);
     l2 = InitList(l2, a2, 5);
