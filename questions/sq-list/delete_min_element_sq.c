@@ -16,7 +16,7 @@
  *****************************************************************************/
 
 
-#include <sq_list.h>
+#include <init_sq_list.h>
 
 // 删除顺序表中最小值
 int delete_min_element_sq(sq_list *list) {
@@ -40,11 +40,8 @@ int delete_min_element_sq(sq_list *list) {
 
 int main() {
     // 测试
-    sq_list *list = init_list_sq();
-    int arr[] = {3, 5, 2, 8, 7, 0, 4, 6, 1, 9};
-    for(int i = 0; i < 10; i++) {
-        append_list_sq(list, arr[i]);
-    }
+    int arr[10] = {0,1,2,3,4,5,6,7,8,9};
+    sq_list *list = init_list_from_array_sq(arr, 10);
     print_length_sq(list);
     print_list_sq(list);
     for(int j = 0; j < 10; j++) {
