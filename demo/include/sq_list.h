@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Name: sq_list.h
+ * Name: sq-list.h
  * Date: 2021/3/8
  * Author: shaozk <https://github.com/shaozk>
  *
@@ -10,20 +10,18 @@
 /* 顺序表
 数组类型：静态分配
 */
-#include<stdlib.h>
-#include<stdbool.h>
-#include<stdio.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #define MAXSIZE 50     // 定义顺序表的最大元素个数
-#define int int   // 定义元素类型
 #define TRUE 1
 #define FALSE 0
 
 typedef int Status;
 typedef struct {
     int data[MAXSIZE];     // 顺序表的元素
-    int length;                 // 顺序表的当前长度
-}sq_list;                // 顺序表的类型定义
+    int length;            // 顺序表的当前长度
+}sq_list;                  // 顺序表的类型定义
 
 
 
@@ -89,11 +87,16 @@ void update_list_sq(sq_list *L, int i, int e) {
 
 // 输出顺序表
 void print_list_sq(sq_list *L) {
-    printf("list:\t"); 
-    for(int i = 0; i < L->length; i++) {
-        printf("%d ", L->data[i]);
+    if(L->length == 0) {
+        printf("Sequence table is empty\n");
+    } else {
+        printf("list:\t");
+        for(int i = 0; i < L->length; i++) {
+            printf("%d ", L->data[i]);
+        }
+        printf("\n");
     }
-    printf("\n");
+
 }
 
 // 顺序表长度

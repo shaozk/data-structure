@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Name: sq_list.c
+ * Name: sq-list.c
  * Date: 2021/3/8
  * Author: shaozk <https://github.com/shaozk>
  *
