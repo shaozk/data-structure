@@ -21,6 +21,7 @@ add_executable(delete_min_element_sq questions/sq-list/delete_min_element_sq.c)
 add_executable(reverse_sq questions/sq-list/reverse_sq.c)
 add_executable(delete_x_element_sq questions/sq-list/delete_x_element_sq.c)
 add_executable(delete_s2t_element_sq questions/sq-list/delete_s2t_element_sq.c)
+add_executable(delete_duplicate_element questions/sq-list/delete_duplicate_element_sq.c)
 
 
 

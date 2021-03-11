@@ -19,6 +19,7 @@
 
 #include <init_sq_list.h>
 
+// 包含s和t
 void delete_s2t_element_sq(sq_list *list, int s, int t) {
     if(list->length <= 0) {
         printf("error! sq list can't be null");
@@ -39,12 +40,37 @@ void delete_s2t_element_sq(sq_list *list, int s, int t) {
 
 }
 
+// 不包含s和t
+void delete_s2t_element_2_sq(sq_list *list, int s, int t) {
+    if(list->length <= 0) {
+        printf("error!! list can't be null");
+        exit(-1);
+    }
+    if(s >= t){
+        printf("error!! s must be smaller than t");
+        exit(-1);
+    }
+    int ind = 0;
+    for(int i = 0; i < list->length; i++){
+        if(list->data[i] <= s || list->data[i] >= t) {
+            list->data[ind] = list->data[i];
+            ind++;
+        }
+    }
+    list->length = ind;
+
+
+}
 
 int main() {
-    int arr[10] = {1,2,2,5,2,5,6,6,2,8};
+    int arr[10] = {1,3,2,5,2,5,6,6,2,8};
     sq_list *list = init_list_from_array_sq(arr, 10);
     print_list_sq(list);
     delete_s2t_element_sq(list, 1, 3);
+    print_list_sq(list);
+
+    printf("----version 2-----\n");
+    delete_s2t_element_2_sq(list, 5, 7);
     print_list_sq(list);
     return 0;
 }
