@@ -14,7 +14,6 @@ add_executable(link_list demo/link_list.c demo/include/link_list.h demo/utils/pr
 add_executable(merge_list demo/merge_list.c demo/utils/print.h demo/include/link_list.h)
 add_executable(reverse_list demo/reverse_list.c demo/utils/print.h)
 add_executable(link_stack demo/include/link_stack.h demo/link_stack.c)
-add_executable(test exp/stack.c)
 
 # sq-list
 add_executable(1_delete_min_element_sq questions/sq-list/1_delete_min_element_sq.c)
@@ -27,5 +26,7 @@ add_executable(8_reverse_sq_m_n_sq questions/sq-list/8_reverse_m_n_sq.c)
 add_executable(9_find_element_insert_it_sq questions/sq-list/9_find_element_insert_it_sq.c)
 
 
+# ustc
+add_executable(1_greatest_common_divisor real-questions/ustc/1_greatest_common_divisor.c)
 
 
