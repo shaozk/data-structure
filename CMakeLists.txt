@@ -17,13 +17,15 @@ add_executable(link_stack demo/include/link_stack.h demo/link_stack.c)
 add_executable(test exp/stack.c)
 
 # sq-list
-add_executable(delete_min_element_sq questions/sq-list/1_delete_min_element_sq.c)
-add_executable(reverse_sq questions/sq-list/2_reverse_sq.c)
-add_executable(delete_x_element_sq questions/sq-list/3_delete_x_element_sq.c)
-add_executable(delete_s2t_element_sq questions/sq-list/4_5_delete_s2t_element_sq.c)
-add_executable(delete_duplicate_element questions/sq-list/6_delete_duplicate_element_sq.c)
-add_executable(merge_order_list_sq questions/sq-list/7_merge_order_list_sq.c)
-add_executable(reverse_sq_m_n_sq questions/sq-list/8_reverse_m_n_sq.c)
+add_executable(1_delete_min_element_sq questions/sq-list/1_delete_min_element_sq.c)
+add_executable(2_reverse_sq questions/sq-list/2_reverse_sq.c)
+add_executable(3_delete_x_element_sq questions/sq-list/3_delete_x_element_sq.c)
+add_executable(4_5_delete_s2t_element_sq questions/sq-list/4_5_delete_s2t_element_sq.c)
+add_executable(6_delete_duplicate_element questions/sq-list/6_delete_duplicate_element_sq.c)
+add_executable(7_merge_order_list_sq questions/sq-list/7_merge_order_list_sq.c)
+add_executable(8_reverse_sq_m_n_sq questions/sq-list/8_reverse_m_n_sq.c)
+add_executable(9_find_element_insert_it_sq questions/sq-list/9_find_element_insert_it_sq.c)
+
 
 
 
