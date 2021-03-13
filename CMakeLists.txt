@@ -23,6 +23,7 @@ add_executable(delete_x_element_sq questions/sq-list/delete_x_element_sq.c)
 add_executable(delete_s2t_element_sq questions/sq-list/delete_s2t_element_sq.c)
 add_executable(delete_duplicate_element questions/sq-list/delete_duplicate_element_sq.c)
 add_executable(merge_order_list_sq questions/sq-list/merge_order_list_sq.c)
+add_executable(reverse_sq_m_n_sq questions/sq-list/reverse_m_n_sq.c)
 
 
 
