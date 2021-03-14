@@ -24,7 +24,8 @@ add_executable(6_delete_duplicate_element wangdao-questions/sq-list/6_delete_dup
 add_executable(7_merge_order_list_sq wangdao-questions/sq-list/7_merge_order_list_sq.c)
 add_executable(8_reverse_sq_m_n_sq wangdao-questions/sq-list/8_reverse_m_n_sq.c)
 add_executable(9_find_element_insert_it_sq wangdao-questions/sq-list/9_find_element_insert_it_sq.c)
-add_executable(10_circular_shift_left wangdao-questions/sq-list/10_circular_shift_left.c)
+add_executable(10_circular_shift_left_sq wangdao-questions/sq-list/10_circular_shift_left_sq.c)
+add_executable(11_find_the_median_sq wangdao-questions/sq-list/11_find_the_median_sq.c)
 
 
 # ustc
