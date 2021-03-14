@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Name: 10_circular_shift_left.c
+ * Name: 10_circular_shift_left_sq.c
  * Date: 2021/3/13
  * Author: shaozk <https://github.com/shaozk>
  *
@@ -34,7 +34,7 @@ sq_list* reverse_list(sq_list *list, int left, int right) {
     return list;
 }
 
-sq_list* circular_shift_left(sq_list *list, int p) {
+sq_list* circular_shift_left_sq(sq_list *list, int p) {
     if(p < 0 || p > list->length) {
         printf("error! out of range");
         exit(-1);
@@ -48,7 +48,7 @@ sq_list* circular_shift_left(sq_list *list, int p) {
 int main() {
     int arr[] = {1,2,3,4,5,6,7,8,9,10};
     sq_list *list = init_list_from_array_sq(arr, 10);
-    list = circular_shift_left(list, 5);
+    list = circular_shift_left_sq(list, 5);
     print_list_sq(list);
     return 0;
 }
