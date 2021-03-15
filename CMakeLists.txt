@@ -15,6 +15,7 @@ add_executable(merge_list demo/merge_list.c demo/utils/print.h demo/include/link
 add_executable(reverse_list demo/reverse_list.c demo/utils/print.h)
 add_executable(link_stack demo/include/link_stack.h demo/link_stack.c)
 
+
 # sq-list
 add_executable(1_delete_min_element_sq wangdao-questions/sq-list/1_delete_min_element_sq.c)
 add_executable(2_reverse_sq wangdao-questions/sq-list/2_reverse_sq.c)
@@ -24,11 +25,14 @@ add_executable(6_delete_duplicate_element wangdao-questions/sq-list/6_delete_dup
 add_executable(7_merge_order_list_sq wangdao-questions/sq-list/7_merge_order_list_sq.c)
 add_executable(8_reverse_sq_m_n_sq wangdao-questions/sq-list/8_reverse_m_n_sq.c)
 add_executable(9_find_element_insert_it_sq wangdao-questions/sq-list/9_find_element_insert_it_sq.c)
-add_executable(10_circular_shift_left wangdao-questions/sq-list/10_circular_shift_left.c)
+add_executable(10_circular_shift_left wangdao-questions/sq-list/10_circular_shift_left.c real-questions/cqu/1_prime_number.c)
 
 
 # ustc
 add_executable(1_greatest_common_divisor real-questions/ustc/1_greatest_common_divisor.c)
-add_executable(2_train_ticket_booking real-questions/ustc/2_train_ticket_booking.c)
+#add_executable(2_train_ticket_booking real-questions/ustc/2_train_ticket_booking.c)
+
+# cqu
+add_executable(1_prime_number real-questions/cqu/1_prime_number.c)
 
 
