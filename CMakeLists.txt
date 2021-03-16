@@ -26,10 +26,12 @@ add_executable(8_reverse_sq_m_n_sq wangdao-questions/sq-list/8_reverse_m_n_sq.c)
 add_executable(9_find_element_insert_it_sq wangdao-questions/sq-list/9_find_element_insert_it_sq.c)
 add_executable(10_circular_shift_left_sq wangdao-questions/sq-list/10_circular_shift_left_sq.c)
 add_executable(11_find_the_median_sq wangdao-questions/sq-list/11_find_the_median_sq.c)
+add_executable(12_find_the_main_sq wangdao-questions/sq-list/12_find_the_main_element_sq.c)
 
 
 # ustc
 add_executable(1_greatest_common_divisor real-questions/ustc/1_greatest_common_divisor.c)
 add_executable(2_train_ticket_booking real-questions/ustc/2_train_ticket_booking.c)
+add_executable(3_shortest_path_minimum_cost real-questions/ustc/3_shortest_path_minimum_cost.c)
 
 
