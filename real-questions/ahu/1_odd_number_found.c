@@ -1,6 +1,6 @@
 /*****************************************************************************
  *
- * Name: 1_odd_numbe_found.c
+ * Name: 1_odd_number_found.c
  * Date: 2021/3/18
  * Author: shaozk <https://github.com/shaozk>
  *

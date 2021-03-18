@@ -36,10 +36,10 @@ add_executable(3_shortest_path_minimum_cost real-questions/ustc/3_shortest_path_
 
 # cqu
 add_executable(1_prime_number real-questions/cqu/1_prime_number.c)
-
+add_executable(2_upper_to_lower real-questions/cqu/2_upper_to_lower.c)
 add_executable(3_palindrome_number real-questions/cqu/3_palindrome_number.c)
 
 # ahu
-add_executable(1_odd_number_found real-questions/ahu/1_odd_numbe_found.c)
+add_executable(1_odd_number_found real-questions/ahu/1_odd_number_found.c)
 
 
