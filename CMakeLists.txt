@@ -41,5 +41,6 @@ add_executable(3_palindrome_number real-questions/cqu/3_palindrome_number.c)
 
 # ahu
 add_executable(1_odd_number_found real-questions/ahu/1_odd_number_found.c)
+add_executable(2_find_the_perfect_number real-questions/ahu/2_find_the_perfect_number.c)
 
 
