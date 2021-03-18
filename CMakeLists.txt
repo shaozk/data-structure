@@ -34,4 +34,9 @@ add_executable(1_greatest_common_divisor real-questions/ustc/1_greatest_common_d
 add_executable(2_train_ticket_booking real-questions/ustc/2_train_ticket_booking.c)
 add_executable(3_shortest_path_minimum_cost real-questions/ustc/3_shortest_path_minimum_cost.c)
 
+# cqu
+add_executable(1_prime_number real-questions/cqu/1_prime_number.c)
+
+add_executable(3_palindrome_number real-questions/cqu/3_palindrome_number.c)
+
 
