@@ -41,6 +41,7 @@ add_executable(1_delete_all_x_link wd/link-list/1_delete_all_x_link.c)
 add_executable(2_delete_all_x_with_head_link wd/link-list/2_delete_all_x_with_head_link.c)
 add_executable(3_traverse_list_reverse wd/link-list/3_traverse_list_reverse.c)
 add_executable(4_delete_list_min_element wd/link-list/4_delete_list_min_element.c)
+add_executable(5_local_inversion wd/link-list/5_local_inversion_link.c)
 
 
 # ustc
