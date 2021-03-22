@@ -61,6 +61,7 @@ add_executable(3_word_length real-questions/ahu/3_word_length.c)
 
 # bnu
 add_executable(1_find_string_from_id real-questions/bnu/1_find_string_from_id.c)
+add_executable(2_find_max_min real-questions/bnu/2_find_max_min.c)
 
 
 
