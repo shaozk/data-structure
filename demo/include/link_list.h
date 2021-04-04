@@ -22,7 +22,7 @@ typedef struct link_node {
 } link_node, *link_list;       // link_list为指向结构体link_node的指针类型
 
 /*
- * 构造一个空的线性表
+ * 构造一个空的线性表（带头结点）
  */
 link_list init(link_list list) {
     if(list == NULL) {
@@ -36,10 +36,23 @@ link_list init(link_list list) {
 }
 
 /*
+ * 采用头插法建立单链表
+ */
+link_list list_head_insert(link_list list, int a){
+    link_node *p = list;
+    link_node *temp = (link_node*)malloc(sizeof(link_node));
+    temp->data = a;
+    temp->next = p->next;
+    p->next = temp;
+    return p;
+}
+
+/*
  * 销毁线性表
  */
 link_list destroy_list(link_list list) {
     if(list == NULL) {
+        // 头指针为空，说明已是空表
         return list;
     }
     link_node *temp = list->next;
@@ -142,7 +155,6 @@ link_list list_insert(link_list list, int i, int e) {
     temp->next = node;
     return list;
 
-    return list;
 }
 
 /*
