@@ -76,6 +76,13 @@ add_executable(2_quick_sort_pro real-questions/xmu/2_quick_sort_pro.c)
 #nwu
 add_executable(1_is_negative_number real-questions/nwu/1_is_negative_number.c)
 add_executable(2_is_prime_number real-questions/nwu/2_is_prime_number.c)
+add_executable(3_number_of_prime real-questions/nwu/3_number_of_prime.c)
+add_executable(4_is_absolute_prime real-questions/nwu/4_is_absolute_prime.c)
+add_executable(5_is_super_prime real-questions/nwu/5_is_super_prime.c)
+add_executable(6_processing_strings real-questions/nwu/6_processing_strings.c)
+add_executable(7_count_the_number_of_vowels real-questions/nwu/7_count_the_number_of_vowels.c)
+add_executable(8_legal_identifier real-questions/nwu/8_legal_identifier.c)
+add_executable(9_word_statistics real-questions/nwu/9_word_statistics.c)
 
 
 

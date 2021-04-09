@@ -25,7 +25,7 @@
 
 void is_prime_number(int n) {
     int s = sqrtl(n) + 1, flag = 0;
-    if (n == 1) flag = 1;
+    if (n <= 1) flag = 1;
     else {
         for(int i = 2; i < s; i++) {
             if (n % i == 0 ) {
