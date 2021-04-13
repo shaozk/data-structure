@@ -83,6 +83,11 @@ add_executable(6_processing_strings real-questions/nwu/6_processing_strings.c)
 add_executable(7_count_the_number_of_vowels real-questions/nwu/7_count_the_number_of_vowels.c)
 add_executable(8_legal_identifier real-questions/nwu/8_legal_identifier.c)
 add_executable(9_word_statistics real-questions/nwu/9_word_statistics.c)
+#hit
+add_executable(1_decrypt real-questions/hit/1_decrypt.c)
+add_executable(2_exchange_card real-questions/hit/2_exchange_card.c)
+add_executable(3_infinite_series real-questions/hit/3_infinite_series.c)
+
 
 
 
