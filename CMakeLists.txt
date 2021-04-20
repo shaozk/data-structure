@@ -87,6 +87,10 @@ add_executable(9_word_statistics real-questions/nwu/9_word_statistics.c)
 add_executable(1_decrypt real-questions/hit/1_decrypt.c)
 add_executable(2_exchange_card real-questions/hit/2_exchange_card.c)
 add_executable(3_infinite_series real-questions/hit/3_infinite_series.c)
+#xidian
+add_executable(1_the_sum_of_numbers real-questions/xidian/1_the_sum_of_numbers.c)
+add_executable(2_saddle_point real-questions/xidian/2_saddle_point.c)
+add_executable(3_huffman_coding real-questions/xidian/3_huffman_coding.c)
 
 
 
